@@ -1,15 +1,116 @@
+<!-- =======================================================
+  * Nom du projet : Portfolio
+  * Creation : Chepukan
+  * Auteur : Ronan Ridel
+  ======================================================== -->
 <!DOCTYPE html>
-<html lang="fr-FR">
+<!--suppress JSPrimitiveTypeWrapperUsage, HtmlDeprecatedAttribute -->
+<html lang="fr-FR" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+xmlns="http://www.w3.org/1999/html"> <!-- aucune idée de ce que font ces sites à cause de ad block (ou merci peut-être jsp) -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ronan Ridel - Portfolio</title>
+
+    <title>Ronan Ridel - Portfolio BTS SIO</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <link rel="stylesheet" href="content/styles/styles.css">
+
+    <!-- Icone -->
     <link rel="icon" href="content/images/Portfolio_Icon.png" type="image/png">
+
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Liens CSS -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+   <!-- Liens JS  -->
+   <script src="portfolio/js/main.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="portfolio/js/flip-box.js"></script>
+   <script src="particles.js-master/app.js"></script>
+   <script src="particles.js-master/package.json"></script>
+   <script src="particles.js-master/particles.js"></script>
+   <script src="particles.js-master/particles.min.js"></script>
+   <script src="particles.js-master/particles.json"></script>
+ 
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EBNGEFN1F"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+ 
+     gtag('config', 'G-2EBNGEFN1F');
+   </script>
+
     </head>
     <body>
-        <h1 class="nom">Ridel Ronan</h1>
-        <header>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="d-flex flex-column">
+        <div class="profile">
+
+            <script style="margin-bottom: 1px">
+                // Fonction de gestionnaire d'événement pour le clic du bouton
+                function logout() {
+                  // Rediriger vers la nouvelle URL
+                  window.location.href = 'login.html';
+                }
+                // Ajouter un écouteur d'événements au bouton de déconnexion
+                let logoutBtn = document.getElementById("logout-btn");
+                logoutBtn.addEventListener("click", logout);
+              </script>
+
+<br><br>
+
+<script src="https://moment.github.io/luxon/global/luxon.js"></script>
+<!--suppress HtmlDeprecatedAttribute, XmlDeprecatedElement -->
+<script>
+  document.write("<center><font color='#ffffff' size='3' face='arial' id='clockDisplay'>");
+
+  // Définir la localisation en français pour les mois et jours
+  luxon.Settings.defaultLocale = 'fr';
+
+  // Fonction pour mettre à jour l'affichage de l'horloge
+  function updateClock() {
+    const now = luxon.DateTime.local();
+    const dayOfWeek = now.toFormat('cccc'); // Obtenir le jour de la semaine
+    const capitalizedDayOfWeek = dayOfWeek.charAt(0).toUpperCase() + dayOfWeek.slice(1); // Mettre en majuscule la première lettre du jour
+    const formattedTime = now.toFormat('HH:mm:ss'); // Heure au format HH : mm: ss
+    const formattedDate = capitalizedDayOfWeek + ', ' + now.toFormat('dd LLLL yyyy');
+
+    // Concaténer la date et l'heure avec un saut de ligne entre eux
+    document.getElementById("clockDisplay").innerHTML = formattedDate + '<br>' + formattedTime;
+  }
+
+  // Mettre à jour l'horloge toutes les secondes
+  setInterval(updateClock, 1000); // Mettre à jour chaque seconde (1000 ms)
+  // Appeler la fonction initiale pour afficher l'heure actuelle
+  updateClock();
+  document.write("</font></center>");
+</script>
+
+<br>
+            
             <nav>
                 <ul>
                     <li><a href="#presentation">Présentation</a></li>
@@ -20,7 +121,9 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+</header>
+
+        <h1 class="nom">Ridel Ronan</h1>
         
         <main id="main">
              <!-- ======= Profil Section  ======= -->
