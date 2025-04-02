@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #f4f4f4;
 }
 
 header {
@@ -23,6 +24,11 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #61dafb;
 }
 
 .nom {
@@ -41,6 +47,13 @@ main {
 
 section {
     margin-bottom: 2rem;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
