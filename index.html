@@ -1,32 +1,22 @@
 <!-- =======================================================
   * Nom du projet : Portfolio
-  * Creation : Chepukan
+  * Création : Chepukan
   * Auteur : Ronan Ridel
-  ======================================================== -->
+======================================================== -->
 <!DOCTYPE html>
-<!--suppress JSPrimitiveTypeWrapperUsage, HtmlDeprecatedAttribute -->
-<html lang="fr-FR" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-xmlns="http://www.w3.org/1999/html"> <!-- aucune idée de ce que font ces sites à cause de ad block (ou merci peut-être jsp) -->
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ridel Ronan">
+  <title>Ronan Ridel - Portfolio BTS SIO</title>
+  <link rel="icon" href="content/images/Portfolio_Icon.png" type="image/png">
 
-    <title>Ronan Ridel - Portfolio BTS SIO</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,700|Poppins:300,400,500,700" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="content/styles/styles.css">
-
-    <!-- Icone -->
-    <link rel="icon" href="content/images/Portfolio_Icon.png" type="image/png">
-
-    <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Liens CSS -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -34,27 +24,61 @@ xmlns="http://www.w3.org/1999/html"> <!-- aucune idée de ce que font ces sites 
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-   <!-- Liens JS  -->
-   <script src="portfolio/js/main.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-   <script src="portfolio/js/flip-box.js"></script>
-   <script src="particles.js-master/app.js"></script>
-   <script src="particles.js-master/package.json"></script>
-   <script src="particles.js-master/particles.js"></script>
-   <script src="particles.js-master/particles.min.js"></script>
-   <script src="particles.js-master/particles.json"></script>
- 
-   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EBNGEFN1F"></script>
-   <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
- 
-     gtag('config', 'G-2EBNGEFN1F');
-   </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="content/styles/styles.css">
 
-    </head>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="portfolio/js/main.js"></script>
+  <script src="portfolio/js/flip-box.js"></script>
+  <script src="particles.js-master/particles.min.js"></script>
+  <script src="particles.js-master/app.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2EBNGEFN1F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2EBNGEFN1F');
+  </script>
+
+  <!-- Horloge avec Luxon -->
+  <script src="https://moment.github.io/luxon/global/luxon.js"></script>
+  <script>
+    luxon.Settings.defaultLocale = 'fr';
+    function updateClock() {
+      const now = luxon.DateTime.local();
+      const jour = now.toFormat('cccc');
+      const jourMaj = jour.charAt(0).toUpperCase() + jour.slice(1);
+      const heure = now.toFormat('HH:mm:ss');
+      const date = jourMaj + ', ' + now.toFormat('dd LLLL yyyy');
+      document.getElementById("clockDisplay").innerHTML = `${date}<br>${heure}`;
+    }
+    setInterval(updateClock, 1000);
+    window.onload = updateClock;
+  </script>
+
+  <!-- Bouton retour en haut -->
+  <style>
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+  </style>
+</head>
     <body>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -169,9 +193,8 @@ xmlns="http://www.w3.org/1999/html"> <!-- aucune idée de ce que font ces sites 
                             </div>
                             <div  class="col-lg-6">
                               <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Telephone :</strong> <span><a style="color: black" href="tel:0767579036">07 71 67 34 73</a></span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Email :</strong> <span><a style="color: black" href="mailto:nathan.serror@gmail.com">ridel.ronan@gmail.com</a></span></li>
-            
+                                <li><i class="bi bi-chevron-right"></i> <strong>Telephone :</strong> <span><a style="color: black" href="tel:0771673473">07 71 67 34 73</a></span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email :</strong> <span><a style="color: black" href="mailto:ridel.ronan@gmail.com">ridel.ronan@gmail.com</a></span></li>
                               </ul>
                             </div>
                         </div>
@@ -216,6 +239,11 @@ xmlns="http://www.w3.org/1999/html"> <!-- aucune idée de ce que font ces sites 
             <section id="stages">
                 <h2>Stages</h2>
                 <p>Description des expériences professionnelles.</p>
+            </section>
+
+            <section id="certifications">
+                <h2>Mes Certifications</h2>
+                <p></p>
             </section>
         
             <section id="cv">
