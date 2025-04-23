@@ -143,8 +143,7 @@ a:hover {
     text-align: center;
 }
 
-#cv a,
-#contact a {
+#cv a {
     display: inline-block;
     margin-top: 1rem;
     font-weight: 500;
