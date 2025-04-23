@@ -80,12 +80,6 @@ a:hover {
     margin: 2rem 0;
 }
 
-#social .logos {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
 #social img {
     width: 50px;
     height: 50px;
@@ -94,4 +88,10 @@ a:hover {
 
 #social img:hover {
     transform: scale(1.1);
+}
+
+#logolink {
+    display: flex;
+    width: 50px;
+    height: 50px;
 }
