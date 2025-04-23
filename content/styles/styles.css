@@ -142,3 +142,40 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+#cv,
+#contact {
+    text-align: center;
+}
+
+#cv a,
+#contact a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+#cv a:hover,
+#contact a:hover {
+    background-color: #0056b3;
+}
+
+#contact .logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+#img-cv {
+    display: flex;
+    justify-content: center;
+    width:100%; 
+    max-width:800px
+}
